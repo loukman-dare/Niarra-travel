@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.logo{
+  color: #fff;
+  
+}
+.enq{
+  color:#CCC
+}
+.country{
+  font-family: "Wulkan Display Medium",sans;
+  text-transform: uppercase;
+}
+.first{
+  font-family: "ABeeZee", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.akaya {
+  font-family: "Akaya Telivigala", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
