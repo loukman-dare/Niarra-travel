@@ -6,10 +6,7 @@ import { faClose, faPlay } from '@fortawesome/free-solid-svg-icons'
 import Header from '../../../Dividing/header';
 
 const Hero = () => {
-  const controls = useAnimation();
-  const { scrollYProgress } = useScroll();
-  const [dashOffset, setDashOffset] = useState(0);
-
+  
   const [mousePosition, setMousePosition] = React.useState({ x: 0, y: 0 });
 
   const handleMouseMove = (event) => {
@@ -24,19 +21,12 @@ const Hero = () => {
   const [openVedio,setOpenVedio] = useState(false)
 
   useEffect(() => {
-    const unsubscribe = scrollYProgress.onChange((latest) => {
-      // Increase dash offset based on scroll progress
-      setDashOffset(latest * 750); // Adjust the factor as needed
-    });
-
-    return () => unsubscribe();
-  }, [scrollYProgress]);
-
-  useEffect(() => {
-    controls.start({ strokeDashoffset: dashOffset });
-  }, [dashOffset, controls]);
-
-
+    if (openVedio) {
+        document.body.style.overflow = "hidden";
+    } else {
+        document.body.style.overflow = "auto";
+    }
+}, [openVedio]);
   return (
     <div className=' relative w-screen h-screen z-10 '>
         <Header />
@@ -145,7 +135,7 @@ const Hero = () => {
       }
       </AnimatePresence>
            
-        
+{/*         
         <motion.div transition={{ duration: 1, ease: "easeOut" }} className='absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 flex items-center border-none'>
           <motion.svg
             width="128" height="128" viewBox="0 0 128 128" className='w-32 h-32'
@@ -181,29 +171,28 @@ const Hero = () => {
       height="64"
       viewBox="0 0 256 256"
       className='w-[500px] h-[500px]'
-      animate={{ rotate: -360, scale: [1, 1.2, 1] }} 
-      transition={{
-        rotate: { duration: 60, ease: "linear", repeat: Infinity },
-        scale: { duration: 40, ease: "easeInOut", repeat: Infinity, repeatType: "mirror" }
-      }}
+      initial={{ strokeDasharray: "0, 188.4" }}
+            animate={{ strokeDasharray: "4 2" }}
+            transition={{ duration: 2, ease: "easeInOut" }}
+     
     >
       <motion.circle
-        cx="128"
-        cy="128"
-        r="120"
-        fill="none"
-        stroke="white"
-        strokeWidth="1"
-        strokeDasharray="1 2"
-        animate={controls}
-      />
+            cx="128"
+            cy="128"
+            r="120"
+            fill="none"
+            stroke="white"
+            strokeWidth="1"
+            strokeDasharray="750" // Set strokeDasharray to the circumference of the circle
+            animate={{ strokeDasharray: [ dashOffset ,"0 2",dashOffset] }} // Animate strokeDashoffset based on scroll
+          />
     </motion.svg>
         </motion.div>
         <motion.div className='text-white text-base absolute bottom-0 left-1/2 -translate-x-1/2'> 
             <p>Scroll</p>
             <p>Down</p>
 
-        </motion.div>
+        </motion.div> */}
     </div>
   );
 }

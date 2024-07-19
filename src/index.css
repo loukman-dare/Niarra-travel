@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+  
 .logo{
   color: #fff;
   
@@ -19,6 +20,71 @@
 }
 .akaya {
   font-family: "Akaya Telivigala", system-ui;
-  font-weight: 400;
   font-style: normal;
 }
+.text-slide{
+  display: flex !important;
+
+
+}
+#slider-boxes{
+  display: flex !important;
+} 
+
+ .slick-next::before{
+  display: none !important;
+}
+.slick-prev::before{
+  display: none !important;
+}
+
+/* .slick-prev::before{
+  content: "33" !important;
+  color: red;
+  position: absolute;
+  left: 100px !important;
+  font-size: 40px;
+  z-index: inherit;
+}
+ .slick-slider {
+  text-align:center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}   */
+slick-slide {
+    margin-left: 5px!important;
+    margin-right: 5px!important;
+}
+.slick-slider {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .swiper-pagination{
+    background: red !important
+  }
+  .slick-dots{
+    bottom: 10px !important;
+  }
+  .slick-dots li button::before{
+    font-size: 15px !important;
+  }
+  .injected-svg path {
+    stroke: white;
+    fill: none; 
+    stroke-width: 3px;
+  }
+  .mount{
+    background-image: url(https://www.niarratravel.com/content/images/newsletter/_720x393_crop_center-center_80_none/163/mountain-cutout-2.webp);
+  }
+  
+
+  .cloud{
+    /* background-image: url(https://www.niarratravel.com/static/1721198446/assets/img/footer/footer-clouds.png);   */
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  

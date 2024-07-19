@@ -1,0 +1,10 @@
+#slider-boxes{
+    display: flex !important;
+}
+.slick-slide div{
+    margin: 10px;
+}
+.slick-arrow::before{
+    color: red;
+    font-size: 50px;
+}
