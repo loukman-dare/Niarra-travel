@@ -7,8 +7,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function SampleNextArrow(props) {
     const { className, style, onClick } = props;
     return (
-      <motion.div initial="initial" whileHover="hover" className={`${className} w-16 h-16 group z-50`}
-      style={{ ...style, borderRadius:"100%",position:"absolute",right:"70px" }}
+      <motion.div initial="initial" whileHover="hover" className={`${className} w-10 h-10 md:w-16 md:h-16 group z-50  md:right-[70px]`}
+      style={{ ...style, borderRadius:"100%",position:"absolute" }}
       onClick={onClick} 
      >
           <motion.div 
@@ -41,8 +41,8 @@ function SampleNextArrow(props) {
   function SamplePrevArrow(props) {
     const { className, style, onClick } = props;
     return (
-      <motion.div initial="initial" whileHover="hover" className={`${className} w-16 h-16 group z-50`}
-      style={{ ...style, borderRadius:"100%",position:"absolute",left:"70px" }}
+      <motion.div initial="initial" whileHover="hover" className={`${className} w-10 h-10 md:w-16 md:h-16 group z-50  md:left-[70px]`}
+      style={{ ...style, borderRadius:"100%",position:"absolute" }}
       onClick={onClick} 
      >
           <motion.div 

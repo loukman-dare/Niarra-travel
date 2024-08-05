@@ -7,7 +7,7 @@ const InspiredCard = ({ img, countryIcon, countryName, days, type, explain, pric
 
   return (
     <motion.div 
-      className='w-96 h-[700px] p-7 relative cursor-pointer transform duration-500 overflow-hidden  '
+      className='w-full sm:w-[300px] md:w-96 h-[600px] sm:h-[700px] p-7 relative cursor-pointer transform duration-500 overflow-hidden  '
       initial={{ rotate: 0 }}
       whileHover={{ rotate: 1 }}
       transition={{ ease: "easeInOut", duration: 0.3 }}
@@ -35,16 +35,16 @@ const InspiredCard = ({ img, countryIcon, countryName, days, type, explain, pric
           </div>
           <div className='text-lg font-bold uppercase text-white'>{countryName}</div>
         </div>
-        <div className='mt-64 text-white flex flex-col gap-4'>
-          <p className='text-base font-medium'>{`${days}-days Trip`}</p>
-          <p className='text-3xl font-extrabold akaya text-center'>{type}</p>
+        <div className='mt-48 lg:mt-64 text-white flex flex-col gap-4'>
+          <p className='text-sm lg:text-base font-medium'>{`${days}-days Trip`}</p>
+          <p className='text-lg lg:text-3xl font-extrabold akaya text-center'>{type}</p>
           <p className='text-sm font-normal '>{explain}</p>
-          <div className='flex items-center justify-between'>
-            <button className='py-3 px-5 border rounded-full hover:text-black hover:bg-white transform duration-500'>Discover Trip</button>
+          <div className='flex items-center  gap-12 lg:gap-12 md:gap-36'>
+            <button className='p-2 lg:py-3 lg:px-5 border rounded-full hover:text-black hover:bg-white transform duration-500'>Discover Trip</button>
             <div className='flex flex-col items-center gap-2'>
               <p className='text-sm font-bold'>FROM</p>
-              <div className='flex items-center gap-1'>
-                <p className='text-xl font-medium'>{price}</p>
+              <div className='flex items-center gap-2'>
+                <p className='text-base lg:text-xl font-medium'>{price}</p>
                 <p className='text-sm font-light'>pp</p>
               </div>
             </div>

@@ -8,6 +8,9 @@ import FindTravelCard from './Find Travel/FindTravelCard'
 import FindTravel from './Find Travel/FindTravel'
 import InspiringStories from './InspiringStories/InspiringStories'
 import ReceiveInspiration from './ReceiveInspiration/ReceiveInspiration'
+import ContactUS from './ContactUs/ContactUS'
+import Footer from '../../Dividing/Footer'
+import TinyDropDown from '../../Utils/TinyDropDown'
 
 const Home = () => {
   return (
@@ -21,6 +24,8 @@ const Home = () => {
         <InspiringStories />
         <Comments />
         <ReceiveInspiration />
+        <ContactUS />
+        <Footer />
     </div>
   )
 }

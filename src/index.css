@@ -15,18 +15,17 @@
 }
 .first{
   font-family: "ABeeZee", sans-serif;
-  font-weight: 400;
   font-style: normal;
 }
 .akaya {
   font-family: "Akaya Telivigala", system-ui;
   font-style: normal;
 }
-.text-slide{
+/* .text-slide{
   display: flex !important;
 
 
-}
+} */
 #slider-boxes{
   display: flex !important;
 } 
@@ -87,4 +86,26 @@ slick-slide {
     height: 100%;
   }
 
+  .input-container {
+    position: relative;
+  }
   
+  .input-container label {
+    position: absolute;
+    left: 0;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    transform: translateY(0);
+  }
+  
+  .input-container input:focus + label,
+  .input-container input:not(:placeholder-shown) + label {
+    transform: translateY(-30px);
+   
+  }
+  .input-container input::placeholder {
+    @apply opacity-0 transition-opacity duration-300 ease-in-out;
+  }
+.input-container input:focus::placeholder {
+  @apply opacity-100;
+}

@@ -3,9 +3,9 @@ import { motion } from 'framer-motion';
 
 const FindTravelCard = ({ img, name, exp, index }) => {
   return (
-    <div className={`flex flex-col items-center gap-7 p-16 ${index % 2 === 0 ? "-translate-y-24" : ""}`}>
-      <div className='w-80 h-[500px] relative p-10 akaya text-3xl'>
-        <img src={img} className='w-full h-full absolute top-0 left-0 -z-10' />
+    <div className={`flex  flex-col items-center gap-7 p-9 ${index % 2 === 0 ? "lg:-translate-y-24" : ""}`}>
+      <div className='w-full md:w-[300px] lg:w-72 h-[500px] relative p-10 akaya text-3xl'>
+        <img src={img} className='w-full h-full absolute top-0 left-0 -z-10' alt={name} />
         <p className='text-center text-white'>{name}</p>
       </div>
       <div className='text-center font-semibold opacity-50'>{exp}</div>

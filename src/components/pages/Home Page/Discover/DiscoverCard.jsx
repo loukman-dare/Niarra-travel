@@ -23,7 +23,7 @@ const DiscoverCard = ({ map, name, location,  slideIndex, currentSlide }) => {
           />
         </motion.div>
         <p className={`font-bold text-2xl ${currentSlide !== slideIndex ? 'invisible' : ""}`}>I want to discover</p>
-        <motion.p animate={currentSlide === slideIndex ? { opacity: 1 } : { opacity: 0.5 }} className={`font-medium text-9xl akaya`}>{name}</motion.p>
+        <motion.p animate={currentSlide === slideIndex ? { opacity: 1 } : { opacity: 0.5 }} className={`font-medium text-5xl md:text-9xl akaya`}>{name}</motion.p>
         <motion.button
           initial={{ backgroundColor: "transparent", color: "white" }}
           whileHover={{ backgroundColor: "white", color: "black" }}
@@ -31,7 +31,7 @@ const DiscoverCard = ({ map, name, location,  slideIndex, currentSlide }) => {
           className={`py-3 rounded-full px-6 border text-base ${currentSlide !== slideIndex ? 'invisible' : ""}`}>
           Discover more
         </motion.button>
-        <div className={`flex items-center gap-2 text-white absolute -left-36 bottom-2 ${currentSlide !== slideIndex ? 'invisible' : ""}`}>
+        <div className={`flex items-center gap-2 text-white absolute -left-24  md:-left-36 bottom-2 ${currentSlide !== slideIndex ? 'invisible' : ""}`}>
           <FontAwesomeIcon icon={faLocation} className='text-2xl' />
           <p>{location}</p>
         </div>

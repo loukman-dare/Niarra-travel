@@ -55,15 +55,15 @@ const DropDown = ({isOpen,level,setLevel,prevValue,setPrevValue,currentValue,set
                                     alt="previous"
                                 />
                                 <img
-                                    className={`absolute w-[300px] h-[400px] ${level === 0 ? "" : level % 2 === 0 ? "transform translate-x-10 translate-y-6 rotate-3" : level % 3 === 0 ? "transform -translate-x-15 translate-y-4 -rotate-6" : "transform -translate-x-10 translate-y-6 -rotate-3"}`}
+                                    className={`absolute w-[300px] h-[400px] ${level === 0 ? "" : level % 5                           === 0 ? "transform translate-x-10 translate-y-6 rotate-3" : level % 3 === 0 ? "transform -translate-x-15 -translate-y-4 -rotate-6" : "transform -translate-x-10 -translate-y-6 -rotate-3"}`}
                                     src={images[getImageIndex(currentValue)]}
                                     alt="current"
                                 />
                                 {locations && (
-                                    <div className='flex relative bottom-[-450px] left-[-100px] items-center gap-5 '>
+                                    <motion.div initial={{opacity:0}} animate={{opacity:1}} transition={{delay:0.5}} className='flex relative bottom-[-450px] left-[-100px] items-center gap-5 '>
                                         <FontAwesomeIcon icon={faLocation} />
                                         <div>{locations[getImageIndex(currentValue)]}</div>
-                                    </div>
+                                    </motion.div>
                                 )}
                             </motion.div>
                         </div>

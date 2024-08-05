@@ -5,14 +5,14 @@ import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
 const InspiringStories = () => {
   return (
-    <div className="flex flex-col items-center  h-[1200px] gap-5">
+    <div className="flex flex-col items-center h-[2000px]  lg:h-[1200px] gap-5">
         <div className="flex flex-col items-center gap-1 ">
             <p className="text-base font-bold">GET A GLIMPSE OF WHAT YOU CAN EXPERIENCE</p>
             <p className=" font-bold akaya text-5xl">Inspiring</p>
             <p className="text-3xl akaya font-light">stories</p>
         </div>
-        <div className="flex items-center gap-24">
-              <div className='flex flex-col w-[370px] gap-5 '>   
+        <div className="flex flex-col lg:flex-row items-center gap-24">
+              <div className='flex flex-col w-[370px] gap-1 lg:gap-5 '>   
                   <img src={africa} className='w-[350px] h-[600px]'/>
                   <p className='w-3/4 font-medium text-4xl akaya'>How to choose a <span className='text-3xl font-thin opacity-75 akaya italic'>responsible</span> tour operator</p>
                   <p className='text-orange-500  font-bold  text-xs'>ABOUT NIARRA TRAVEL</p>
