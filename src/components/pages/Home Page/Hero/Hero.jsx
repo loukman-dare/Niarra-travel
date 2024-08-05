@@ -155,7 +155,7 @@ const Hero = () => {
         )
       }
       </AnimatePresence>
-      {/* <motion.div transition={{ duration: 1, ease: "easeOut" }} className='absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 flex items-center border-none'>
+      <motion.div transition={{ duration: 1, ease: "easeOut" }} className='absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 flex items-center border-none'>
         <motion.svg
           width="128" height="128" viewBox="0 0 128 128" className='w-32 h-32'
           style={{ strokeDasharray }}
@@ -218,7 +218,7 @@ const Hero = () => {
             strokeDashoffset={useTransform(scrollYProgress, [0, 0.5, 1], [377, 0, -0])}
           />
         </motion.svg>
-      </motion.div> */}
+      </motion.div>
       <motion.div className='text-white text-base absolute bottom-0 left-1/2 -translate-x-1/2' style={{ opacity }}>
         <p>Scroll</p>
         <p>Down</p>
